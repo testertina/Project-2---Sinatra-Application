@@ -13,11 +13,13 @@ end
 # Create
 post "/restaurants" do
 	@resturants = Restaurant.create!(params[:restaurant])
-  redirect("/restaurants/#{@restaurant.id}")
+  redirect("restaurants/#{@restaurant.id}")
 end
 
 # Show
 get "/restaurants/:id" do
+	@restaurant = Restaurant.find(params[:id])
+	erb :"restaurants/show"
 end
 
 # Edit
