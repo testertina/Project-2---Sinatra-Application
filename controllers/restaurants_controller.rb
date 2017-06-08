@@ -1,5 +1,6 @@
 # Index
 get "/restaurants" do
+	"Resturants are working!"
 end
 
 # New

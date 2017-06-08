@@ -1,5 +1,6 @@
 # Index
 get "/reviews" do
+	"Reviews are working!"
 end
 
 # New
