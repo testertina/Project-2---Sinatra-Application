@@ -12,6 +12,8 @@ end
 
 # Create
 post "/restaurants" do
+	@resturants = Restaurant.create!(params[:restaurant])
+  redirect("/restaurants/#{@restaurant.id}")
 end
 
 # Show
