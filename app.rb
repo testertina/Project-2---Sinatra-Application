@@ -7,6 +7,6 @@ Dir[File.dirname(__FILE__) + '/models/*.rb'].each { |file| require file }
 Dir[File.dirname(__FILE__) + '/controllers/*.rb'].each { |file| require file }
 
 # General route actions
-get '/restaurants' do
+get '/' do
   erb :home
 end

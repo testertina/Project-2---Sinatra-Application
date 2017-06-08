@@ -1,7 +1,5 @@
 require 'sinatra'
 require 'pg'
-require 'sinatra/reloader' if development?
 
-use Rack::MethodOverride
-
-run app
+require File.join(File.dirname(__FILE__), 'app.rb')
+run Sinatra::Application
