@@ -1,10 +1,13 @@
 # Index
 get "/restaurants" do
-	"Resturants are working!"
+	@restaurants = Restaurant.all
+	erb :"restaurants/index"
 end
 
 # New
 get "/restaurants/new" do
+	@restaurants = Restaurant.all
+	erb :"restaurants/new"
 end
 
 # Create
