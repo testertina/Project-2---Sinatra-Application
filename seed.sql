@@ -6,10 +6,12 @@ CREATE TABLE post (
   name VARCHAR(200) NOT NULL,
   cuisine VARCHAR(20), TEXT NOT NULL,
   location TEXT NOT NULL,
-  cost 
-  opening_times
-  restaurant_id
+  cost TEXT, VARCHAR(4) CHECK (cost == '£' OR cost == '££' OR cost == '£££' OR cost == '££££'),
+  opening_times TEXT
 
 );
 
-INSERT INTO post (name , cuisine , location , cost , opening_times , restaurant_id) VALUES ('Post 1' , 'Body text 1');
+INSERT INTO post (name , cuisine , location , cost , opening_times , restaurant_id) VALUES ('Bill''s Richmond Restaurant' , 'European' , 'Richmond' , '££', "9am-10pm");
+INSERT INTO post (name , cuisine , location , cost , opening_times , restaurant_id) VALUES ('Bill''s Richmond Restaurant' , 'European' , 'Richmond' , '££', "9am-10pm");
+INSERT INTO post (name , cuisine , location , cost , opening_times , restaurant_id) VALUES ('Bill''s Richmond Restaurant' , 'European' , 'Richmond' , '££', "9am-10pm");
+INSERT INTO post (name , cuisine , location , cost , opening_times , restaurant_id) VALUES ('Bill''s Richmond Restaurant' , 'European' , 'Richmond' , '££', "9am-10pm");
