@@ -17,28 +17,33 @@ end
 # Show: user can read a specific review.
 get "/restaurants/:id/reviews/:id2" do
 	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
-	@review = Review.find(params[:id]) # Finds a review with same id as restaurant.
+	@review = Review.find(params[:id2]) # Finds a review with same id as restaurant.
 	erb :"reviews/show"
 end
 
 # Edit
 get "/restaurants/:id/reviews/:id2/edit" do
 	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
-	@review = Review.find(params[:id]) # Finds a review with same id as restaurant.
+	@review = Review.find(params[:id2]) # Finds a review with same id as restaurant.
 	erb :"reviews/edit"
 	
 end
 
 # Update
-put "/restaurants/:id/reviews/:id2" do
+put "/restaurants/:id/reviews/:id2/update" do
 	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
+	@review = Review.find(params[:id2]) # Finds a review with same id as restaurant.
 	# Updates each review element.
 	@review.update(review_text: params[:review_text])
 	
-	redirect("/restaurants/:id/reviews/:id2")
+	redirect("/restaurants/#{@restaurant.id}/reviews/#{@review.id}")
 end
 
 # Delete
 delete "/restaurants/:id/reviews/:id2" do
-	"Delete"
+	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
+	@review = Review.find(params[:id2]) # Finds a review with same id as restaurant.
+	@review.destroy
+
+	redirect("/restaurants/#{restaurant.id}/reviews")
 end
