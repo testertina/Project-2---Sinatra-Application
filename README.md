@@ -145,9 +145,9 @@ rake db:migrate
 ```
 This will create a schema file which is the blueprint to creat a resturants and reviews. This is not to be edited.
 
-* Editing RestaurantController
+* Editing RestaurantsController
 
-Created 7 RESTful routes for the Restaurant controller.
+Created 7 RESTful routes for the Restaurants controller.
 
 The user must be able to:
 
@@ -162,5 +162,19 @@ Each RESTful route (exceptions: DELETE and UPDATE) have corresponding erb files 
 
 Each RESTful route is appropiately commented within the restaurant_controller.rb file.
 
+* Editing ReviewsController
 
+Created 6 RESTful routes for the Reviews Controller.
+
+The user must be able to:
+
+* INDEX: View all reviews associated with a restaurant.
+* SHOW: View a specific review associated with a restaurant.
+* CREATE: Create a review for a particular restaurant.
+* EDIT: A specific review.
+* UPDATE: Save changes made to a specific review.
+
+Each RESTful route (exceptions: DELETE and UPDATE) have corresponding erb files in views/restaurants.  These files are loaded to the site when the user request the corresponding RESTful route.
+
+No NEW RESTful route as a review is created in the restaurants/show.erb and saved to the review table using a foreign key.
 
