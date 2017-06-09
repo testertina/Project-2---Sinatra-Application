@@ -147,5 +147,18 @@ This will create a schema file which is the blueprint to creat a resturants and 
 
 * Editing RestaurantController
 
+Created 7 RESTful routes for the Restaurant controller.
+
+The user must be able to:
+
+* INDEX: View all restaurants.
+* SHOW: View a specific restaurants.
+* CREATE: Create a restaurant.
+* NEW: Save a new restaurant.
+* EDIT: A specific restaurant.
+* UPDATE: Save changes made to a specific restaurant.
+
+Each RESTful route (exceptions: DELETE and UPDATE) have corresponding erb files in views/restaurants.  These files are loaded to the site when the user request the corresponding RESTful route.
+
 
 
