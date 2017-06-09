@@ -16,17 +16,17 @@
  <!-- Iterates through the list of reviews, returns review text and timestamp. -->
 <% @reviews.each do |review| %>
 <div>
-	<p><%= review.id %></p>
+	<p><a href="/restuarants/<%= @restaurant.id %>/reviews/<%= @review.restaurant_id %>"><%= review.id %></a></p>
   <p><%= review.review_text %></p>
   <p><%= review.created_at %></p>
   <p><%= review.updated_at %></p>
 
 
 	<!-- Link to edit the review -->
-	<a href="/restuarants/<%= @restaurant.id %>/reviews/<%= @review.restaurant_id %>/edit">edit</a>
+	<a href="/restuarants/<%= @restaurant.id %>/reviews/<%= @review.id %>/edit">edit</a>
 
 	<!-- Form to delete the review -->
-	<form action="/restuarants/<%= @restaurant.id %>/reviews/<%= @review.restaurant_id %>/delete" method="POST">
+	<form action="/restuarants/<%= @restaurant.id %>/reviews/<%= @review.id %>/delete" method="POST">
 		<input type="hidden" value="DELETE" name="_method"> <!-- Method override post to delete -->
 
 		<input type="submit" name="delete" value="Delete">

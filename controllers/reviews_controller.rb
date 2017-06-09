@@ -14,6 +14,12 @@ get "/restaurants/:id/reviews" do
 	erb :"reviews/index"
 end
 
+# Show: user can read a specific review.
+get "/restaurants/:id/reviews/:id2"
+	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
+	@review = Review.find_by(restaurant_id: @restaurant.id) # Finds a review with same id as restaurant.
+	erb :"reviews/show"
+end
 # Edit
 get "/restaurants/:id/reviews/:id2" do
 	"hello world"
