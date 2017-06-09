@@ -10,10 +10,10 @@
  <!-- Iterates through the list of reviews, returns review text and timestamp. -->
 <% @reviews.each do |review| %>
 <div>
-	<p><a href="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>"><%= review.id %></a></p>
-  <p><%= review.review_text %></p>
-  <p><%= review.created_at %></p>
-  <p><%= review.updated_at %></p>
+	<h3><a href="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>">Review number: <%= review.id %></a></h3>
+	<p><%= @review.review_text %></p>
+	<p>This review was created at <%= @review.created_at %>.</p> 
+	<p>Last update was at <%= @review.updated_at %>.</p><br>
 
 
 	<!-- Link to edit the review -->

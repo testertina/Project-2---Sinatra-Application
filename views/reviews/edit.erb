@@ -5,8 +5,8 @@
 <form action="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>/update" method="POST">
 	<input type="hidden" name="_method" value="PUT"> <!-- Method override for post to put -->
 
-	<label for="review_text">Edit Review:</label>
+	<label for="review_text">Edit Review:</label><br><br>
 	<textarea name="review_text"></textarea><br><br>
 
 	<input type="submit" name="Submit Edit">
-</form><br><br><br>
+</form><br><br>

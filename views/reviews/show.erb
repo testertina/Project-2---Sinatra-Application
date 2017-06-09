@@ -10,8 +10,8 @@
 <div>
 	<h1>Review for <%= @restaurant.restaurant_name %></h1>
 
-	 <p><%= @review.review_text %></p>
-	 <p>This review was created at <%= @review.created_at %>. Last update was at <%= @review.updated_at %>.</p><br>
+	<p>This review was created at <%= @review.created_at %>.</p> 
+	<p>Last update was at <%= @review.updated_at %>.</p><br>
 	<!-- Link to edit the review -->
 	<button><a href="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>/edit">Edit this review</a></button>
 
