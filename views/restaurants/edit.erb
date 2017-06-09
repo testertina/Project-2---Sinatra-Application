@@ -1,13 +1,13 @@
 <h1>Edit a Restaurant</h1>
 
-<form method="POST" action="/restaurants">
+<form action="/restaurants/<%= @restaurant.id %>/update" method="POST">
 	<input type="hidden" name="_method" value="PUT">
 
 	<label for="restaurant_name">Restaurant Name:</label>
 	<input type="string" name="restaurant_name" value="<%= @restaurant.restaurant_name %>"><br>
 
 	<label for="cuisine_type">Type of Cuisine:</label>
-	<input type="string" name="cusine_type" value="<%= @restaurant.cuisine_type %>"><br>
+	<input type="string" name="cuisine_type" value="<%= @restaurant.cuisine_type %>"><br>
 
 
 	<label for="location">Location:</label>
@@ -17,13 +17,7 @@
 	<input type="string" name="price" value="<%= @restaurant.price %>"><br>
 
 	<label for="opening_times">Opening times:</label>
-	<input type="string" name="opening_times" value="<%= @restaurant.opening_times %>"><br>
+	<input type="string" name="opening_times" value="<%= @restaurant.opening_times %>"><br><br>
 
-	<label for="latitude">Latitude:</label>
-	<input type="float" name="latitude" value="<%= @restaurant.latitude %>"><br>
-
-	<label for="longitude">Opening times:</label>
-	<input type="float" name="longitude" value="<%= @restaurant.longitude %>"><br><br>
-
-	<input type="submit" name="Submit Entry">
+	<input type="submit" name="Submit Edit">
 </form>
