@@ -1,27 +1,25 @@
 <!-- Displaying the restaurant parameters -->
 
-<h1><%= @restaurant.restaurant_name %></h1>
+<h1><%= @restaurant.restaurant_name %></h1> <h3>Price range: <%= @restaurant.price %></h3>
 
- <p><%= @restaurant.cuisine_type %></p>
- <p><%= @restaurant.location %></p>
- <p><%= @restaurant.opening_times %></p>
- <p><%= @restaurant.price %></p>
- <p><%= @restaurant.opening_times %></p>
+ <p>This is an authentic <%= @restaurant.cuisine_type %>, it is located in the bustling <%= @restaurant.location %>.</p>
+ 
+ <p>The restaurant opens at <%= @restaurant.opening_times %>.</p> <br>
 
 <!-- Shows particular review; returns review text and timestamp. -->
+<div>
+	<h1>Review for <%= @restaurant.restaurant_name %></h1>
 
-<h1><%= @review.id %></h1>
+	 <p><%= @review.review_text %></p>
+	 <p>This review was created at <%= @review.created_at %>. Last update was at <%= @review.updated_at %>.</p><br>
+	<!-- Link to edit the review -->
+	<button><a href="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>/edit">Edit this review</a></button>
 
- <p><%= @review.review_text %></p>
- <p><%= @review.created_at %></p>
- <p><%= @review.updated_at %></p>
+		<!-- Form to delete the review -->
+	<form action="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>/delete" method="POST">
+		<input type="hidden" value="DELETE" name="_method"> <!-- Method override post to delete -->
 
-<!-- Link to edit the review -->
-<a href="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>/edit">Edit</a>
+		<input type="submit" name="delete" value="Delete this review">
+	</form>
+</div><br><br>
 
-<!-- Form to delete the review -->
-<form action="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>/delete" method="POST">
-	<input type="hidden" value="DELETE" name="_method"> <!-- Method override post to delete -->
-
-	<input type="submit" name="delete" value="Delete">
-</form>
