@@ -17,10 +17,10 @@
  <p><%= @review.updated_at %></p>
 
 <!-- Link to edit the review -->
-<a href="/restuarants/<%= @restaurant.id %>/reviews/<%= @review.restaurant_id %>/edit">Edit</a>
+<a href="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>/edit">Edit</a>
 
 <!-- Form to delete the review -->
-<form action="/restuarants/<%= @restaurant.id %>/reviews/<%= @review.restaurant_id %>/delete" method="POST">
+<form action="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>/delete" method="POST">
 	<input type="hidden" value="DELETE" name="_method"> <!-- Method override post to delete -->
 
 	<input type="submit" name="delete" value="Delete">
