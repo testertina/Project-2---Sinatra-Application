@@ -42,4 +42,8 @@ end
 
 # Delete
 delete "/restaurants/:id/delete" do
+	@restaurant = Restaurant.find(params[:id])
+	@restaurant.destroy
+
+	redirect("/restaurants")
 end

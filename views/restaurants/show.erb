@@ -10,8 +10,8 @@
 
 <a href="/restaurants/<%= @restaurant.id %>/edit">edit</a>
 
-<form action="/restaurants/<%= @restaurant.id %>" method="POST">
-	<input type="hidden" value="delete" name="_method">
+<form action="/restaurants/<%= @restaurant.id %>/delete" method="POST">
+	<input type="hidden" value="DELETE" name="_method">
 
 	<input type="submit" name="delete" value="Delete">
 </form>
