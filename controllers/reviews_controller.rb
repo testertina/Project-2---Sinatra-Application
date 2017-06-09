@@ -21,7 +21,7 @@ get "/restaurants/:id/reviews/:id2" do
 	erb :"reviews/show"
 end
 
-# Edit
+# Edit: Allows user to make changes to a review.
 get "/restaurants/:id/reviews/:id2/edit" do
 	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
 	@review = Review.find(params[:id2]) # Finds a review with same id as restaurant.
@@ -29,7 +29,7 @@ get "/restaurants/:id/reviews/:id2/edit" do
 	
 end
 
-# Update
+# Update: saved changes made to a review.
 put "/restaurants/:id/reviews/:id2/update" do
 	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
 	@review = Review.find(params[:id2]) # Finds a review with same id as restaurant.
@@ -39,11 +39,11 @@ put "/restaurants/:id/reviews/:id2/update" do
 	redirect("/restaurants/#{@restaurant.id}/reviews/#{@review.id}")
 end
 
-# Delete
-delete "/restaurants/:id/reviews/:id2" do
+# Delete: deletes a specific review.
+delete "/restaurants/:id/reviews/:id2/delete" do
 	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
 	@review = Review.find(params[:id2]) # Finds a review with same id as restaurant.
 	@review.destroy
 
-	redirect("/restaurants/#{restaurant.id}/reviews")
+	redirect("/restaurants/#{@restaurant.id}/reviews")
 end
