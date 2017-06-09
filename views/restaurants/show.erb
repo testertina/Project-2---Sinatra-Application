@@ -1,3 +1,5 @@
+<!-- Displaying the restaurant parameters -->
+
 <h1><%= @restaurant.restaurant_name %></h1>
 
  <p><%= @restaurant.restaurant_name %></p>
@@ -7,11 +9,12 @@
  <p><%= @restaurant.price %></p>
  <p><%= @restaurant.opening_times %></p>
 
-
+<!-- Link to edit the restaurant -->
 <a href="/restaurants/<%= @restaurant.id %>/edit">edit</a>
 
+<!-- Form to delete the restaurant -->
 <form action="/restaurants/<%= @restaurant.id %>/delete" method="POST">
-	<input type="hidden" value="DELETE" name="_method">
+	<input type="hidden" value="DELETE" name="_method"> <!-- Method override post to delete -->
 
 	<input type="submit" name="delete" value="Delete">
 </form>

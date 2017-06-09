@@ -160,5 +160,7 @@ The user must be able to:
 
 Each RESTful route (exceptions: DELETE and UPDATE) have corresponding erb files in views/restaurants.  These files are loaded to the site when the user request the corresponding RESTful route.
 
+Each RESTful route is appropiately commented within the restaurant_controller.rb file.
+
 
 

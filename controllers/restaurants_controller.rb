@@ -6,31 +6,33 @@ end
 
 # New: user can input data for a new restaurant.
 get "/restaurants/new" do
-	@restaurants = Restaurant.all
+	@restaurants = Restaurant.all # Finds all restaurants
 	erb :"restaurants/new"
 end
 
 # Show: user can view a specific restaurant to view.
 get "/restaurants/:id" do
-	@restaurant = Restaurant.find(params[:id])
+	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
 	erb :"restaurants/show"
 end
 
 # Create: user can save their new restaurant data.
 post "/restaurants" do
+	# Save new restaurant elements within a restaurant variable.
 	@restaurant = Restaurant.create(restaurant_name: params[:restaurant_name], cuisine_type: params[:cuisine_type], location: params[:location], price: params[:price], opening_times: params[:opening_times], latitude: params[:latitude], longitude: params[:longitude])
  	redirect("/restaurants/#{@restaurant.id}")
 end
 
 # Edit: user can edit a specific restaurant.
 get "/restaurants/:id/edit" do
-	@restaurant = Restaurant.find(params[:id])
+	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
 	erb :"restaurants/edit"
 end
 
 # Update: user an save the changes made to a specific website.
 put "/restaurants/:id/update" do
-	@restaurant = Restaurant.find(params[:id])
+	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
+	# Updates each restaurant element.
 	@restaurant.update(restaurant_name: params[:restaurant_name])
 	@restaurant.update(cuisine_type: params[:cuisine_type])
 	@restaurant.update(location: params[:location])
@@ -42,7 +44,7 @@ end
 
 # Delete: user can delete a specific restaurant.
 delete "/restaurants/:id/delete" do
-	@restaurant = Restaurant.find(params[:id])
+	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
 	@restaurant.destroy
 
 	redirect("/restaurants")

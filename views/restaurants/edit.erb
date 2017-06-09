@@ -1,7 +1,9 @@
 <h1>Edit a Restaurant</h1>
 
+<!-- Form to edit a restaurant, filled with restaurant element values using value = "" -->
+
 <form action="/restaurants/<%= @restaurant.id %>/update" method="POST">
-	<input type="hidden" name="_method" value="PUT">
+	<input type="hidden" name="_method" value="PUT"> <!-- Method override for post to put -->
 
 	<label for="restaurant_name">Restaurant Name:</label>
 	<input type="string" name="restaurant_name" value="<%= @restaurant.restaurant_name %>"><br>
