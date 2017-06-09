@@ -1,4 +1,4 @@
-# Create: user can create a reviw for a restaurant.
+# Create: user can create a review for a restaurant.
 post "/restaurants/:id/reviews" do
 	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
 	# Creates a review in the table reviews.
