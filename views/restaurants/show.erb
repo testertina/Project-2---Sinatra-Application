@@ -10,7 +10,7 @@
  <p><%= @restaurant.opening_times %></p>
 
 <!-- Link to edit the restaurant -->
-<a href="/restaurants/<%= @restaurant.id %>/edit">edit</a>
+<a href="/restaurants/<%= @restaurant.id %>/edit">Edit</a>
 
 <!-- Form to delete the restaurant -->
 <form action="/restaurants/<%= @restaurant.id %>/delete" method="POST">
@@ -19,23 +19,12 @@
 	<input type="submit" name="delete" value="Delete">
 </form>
 
-<!-- Iterates through the list of reviews, returns review text and timestamp. -->
-<% @reviews.each do |review| %>
-<div>
-	<p><%= review.id %></p>
-  <p><%= review.review_text %></p>
-  <p><%= review.timestamp %></p>
+<!-- To view reviews -->
+<a href="/restaurants/<%= @restaurant.id %>/reviews">View reviews</a>
 
-
-	<!-- Link to edit the review -->
-	<a href="/restuarants/<%= @restaurant.id %>/reviews/<%= @review.id %>/edit">edit</a>
-
-	<!-- Form to delete the review -->
-	<form action="/restuarants/<%= @restaurant.id %>/reviews/<%= @review.id %>/delete" method="POST">
-		<input type="hidden" value="DELETE" name="_method"> <!-- Method override post to delete -->
-
-		<input type="submit" name="delete" value="Delete">
-	</form>
-
-</div>
-<% end %>
+<!-- Need to create a text area to create a review. -->
+<form method="POST" action="/restaurants/<%= @restaurant.id %>/reviews">
+	<label for="review_text">Enter review here:</label>
+	<textarea name="review_text"></textarea><br><br>
+	<input type="submit" name="Submit Review">
+</form>

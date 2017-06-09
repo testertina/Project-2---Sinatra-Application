@@ -8,10 +8,11 @@
 # get "/reviews/new" do
 # end
 
-# Show user can view a specific restaurant and their reviews.
-get "/restaurants/:id/reviews/:id" do
+# Index user can view a specific restaurant and their reviews.
+get "/restaurants/:id/reviews" do
 	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
-	erb :"reviews/show"
+	# @review = Review.find(params[:review]) # Finds a review with same id as restaurant.
+	erb :"reviews/index"
 end
 
 # Create
