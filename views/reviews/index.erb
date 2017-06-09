@@ -1,0 +1,12 @@
+<!-- Displaying all reviews -->
+<h1>Local Restaurant Reviews</h1>
+
+<!-- Iterates through the list of reviews, returns name, review text and timestamp. Also contains a link to specific restaurant. -->
+<% @reviews.each do |review| %>
+<div>
+  <h3><a href="/restaurants/<%= restaurants.id %>"><%= review.restaurant_name %></a></h3>
+  <p><%= review.review_text %></p>
+  <p><%= review.timestamp %></p>
+
+</div>
+<% end %>

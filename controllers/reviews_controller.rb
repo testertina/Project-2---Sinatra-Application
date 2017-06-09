@@ -1,18 +1,21 @@
-# Index
-get "/reviews" do
-	"Reviews are working!"
-end
+# Index: user can view all reviews.
+# get "/reviews" do
+# 	@reviews = Review.all
+# 	erb :"reviews/index"
+# end
 
-# New
-get "/reviews/new" do
+# # New
+# get "/reviews/new" do
+# end
+
+# Show user can view a specific restaurant and their reviews.
+get "/restaurants/:id/reviews/:id" do
+	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
+	erb :"reviews/show"
 end
 
 # Create
 post "/reviews" do
-end
-
-# Show
-get "/reviews/:id" do
 end
 
 # Edit
