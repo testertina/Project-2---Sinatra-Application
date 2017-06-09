@@ -23,12 +23,19 @@ end
 
 # Edit
 get "/restaurants/:id/reviews/:id2/edit" do
-	"hello world"
+	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
+	@review = Review.find(params[:id]) # Finds a review with same id as restaurant.
+	erb :"reviews/edit"
+	
 end
 
 # Update
 put "/restaurants/:id/reviews/:id2" do
-	"Update"
+	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
+	# Updates each review element.
+	@review.update(review_text: params[:review_text])
+	
+	redirect("/restaurants/:id/reviews/:id2")
 end
 
 # Delete
