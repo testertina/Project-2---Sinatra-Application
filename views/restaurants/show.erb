@@ -1,16 +1,16 @@
-<h1>#<%= {@restaurant.restaurant_name} %></h1>
+<h1><%= @restaurant.restaurant_name %></h1>
 
- <p><%= restaurant.restaurant_name %></p>
- <p><%= restaurant.cuisine_type %></p>
- <p><%= restaurant.location %></p>
- <p><%= restaurant.opening_times %></p>
- <p><%= restaurant.price %></p>
- <p><%= restaurant.opening_times %></p>
+ <p><%= @restaurant.restaurant_name %></p>
+ <p><%= @restaurant.cuisine_type %></p>
+ <p><%= @restaurant.location %></p>
+ <p><%= @restaurant.opening_times %></p>
+ <p><%= @restaurant.price %></p>
+ <p><%= @restaurant.opening_times %></p>
 
 
-<a href="/<%= @resturant.id %>/edit">edit</a>
+<a href="/restaurants/<%= @restaurant.id %>/edit">edit</a>
 
-<form action="/<%= @restaurant.id %>" method="POST">
+<form action="/restaurants/<%= @restaurant.id %>" method="POST">
 	<input type="hidden" value="delete" name="_method">
 
 	<input type="submit" name="delete" value="Delete">
