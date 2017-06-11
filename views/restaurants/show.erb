@@ -3,9 +3,10 @@
 <h1><%= @restaurant.restaurant_name %></h1>
 
  <p>Cuisine Type: <%= @restaurant.cuisine_type %></p>
- <p>Location: <%= @restaurant.location %></p>
+ <p>Location: <%= @restaurant.location %> <%= @restaurant.post_code %></p>
  <p>Price: <%= @restaurant.price %></p>
  <p>Opening times: <%= @restaurant.opening_times %></p>
+ <p>Location: <%= @restaurant.longitude %>, <%= @restaurant.latitude %></p>
 
  <!-- To view reviews -->
 <button><a href="/restaurants/<%= @restaurant.id %>/reviews">View restaurant reviews</a></button><br><br><br>

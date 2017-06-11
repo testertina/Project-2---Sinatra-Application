@@ -3,7 +3,7 @@
 <!-- Form to edit a restaurant, filled with restaurant element values using value = "" -->
 
 <form action="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>/update" method="POST">
-	<input type="hidden" name="_method" value="PUT"> <!-- Method override for post to put -->
+	<input type="hidden" name="_method" value="PATCH"> <!-- Method override for post to patch -->
 
 	<label for="review_text">Edit Review:</label><br><br>
 	<textarea name="review_text"></textarea><br><br>

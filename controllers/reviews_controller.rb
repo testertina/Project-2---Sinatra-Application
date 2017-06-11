@@ -2,7 +2,7 @@
 post "/restaurants/:id/reviews" do
 	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
 	# Creates a review in the table reviews.
-	@review = Review.create(restaurant_id: @restaurant.id, restaurant_name: @restaurant.restaurant_name, cuisine_type: @restaurant.cuisine_type, location: @restaurant.location, price: @restaurant.price, opening_times: @restaurant.opening_times, review_text: params[:review_text])
+	@review = Review.create(restaurant_id: @restaurant.id, restaurant_name: @restaurant.restaurant_name, cuisine_type: @restaurant.cuisine_type, location: @restaurant.location, post_code: @restaurant.post_code, price: @restaurant.price, opening_times: @restaurant.opening_times, review_text: params[:review_text])
  	redirect("/restaurants/#{@restaurant.id}/reviews")
 end
 
@@ -30,13 +30,13 @@ get "/restaurants/:id/reviews/:id2/edit" do
 end
 
 # Update: saved changes made to a review.
-put "/restaurants/:id/reviews/:id2/update" do
+patch "/restaurants/:id/reviews/:id2/update" do
 	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
 	@review = Review.find(params[:id2]) # Finds a review with same id as restaurant.
 	# Updates each review element.
 	@review.update(review_text: params[:review_text])
 	
-	redirect("/restaurants/#{@restaurant.id}/reviews/#{@review.id}")
+	redirect("/restaurants/#{@restaurant.id}/reviews")
 end
 
 # Delete: deletes a specific review.
@@ -45,5 +45,5 @@ delete "/restaurants/:id/reviews/:id2/delete" do
 	@review = Review.find(params[:id2]) # Finds a review with same id as restaurant.
 	@review.destroy
 
-	redirect("/restaurants/#{@restaurant.id}/reviews")
+	redirect("/restaurants/#{@restaurant.id}")
 end

@@ -19,7 +19,7 @@ end
 # Create: user can save their new restaurant data.
 post "/restaurants" do
 	# Save new restaurant elements within a restaurant variable.
-	@restaurant = Restaurant.create(restaurant_name: params[:restaurant_name], cuisine_type: params[:cuisine_type], location: params[:location], price: params[:price], opening_times: params[:opening_times], latitude: params[:latitude], longitude: params[:longitude])
+	@restaurant = Restaurant.create(restaurant_name: params[:restaurant_name], cuisine_type: params[:cuisine_type], location: params[:location], post_code: params[:post_code], price: params[:price], opening_times: params[:opening_times], latitude: params[:latitude], longitude: params[:longitude])
  	redirect("/restaurants/#{@restaurant.id}")
 end
 
@@ -36,6 +36,7 @@ put "/restaurants/:id/update" do
 	@restaurant.update(restaurant_name: params[:restaurant_name])
 	@restaurant.update(cuisine_type: params[:cuisine_type])
 	@restaurant.update(location: params[:location])
+	@restaurant.update(post_code: params[:post_code])
 	@restaurant.update(price: params[:price])
 	@restaurant.update(opening_times: params[:opening_times])
 	
@@ -45,7 +46,8 @@ end
 # Delete: user can delete a specific restaurant.
 delete "/restaurants/:id/delete" do
 	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
+	@review = Review.find(params[:id]) # Finds a review with same id as restaurant.
+	@review.destroy
 	@restaurant.destroy
-
 	redirect("/restaurants")
 end

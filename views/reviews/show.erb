@@ -1,25 +1,31 @@
 <!-- Displaying the restaurant parameters -->
+<% if @review then %>
 
-<h1><%= @restaurant.restaurant_name %></h1> <h3>Price range: <%= @restaurant.price %></h3>
+	<h1><%= @restaurant.restaurant_name %></h1> <h3>Price range: <%= @restaurant.price %></h3>
 
- <p>This is an authentic <%= @restaurant.cuisine_type %>, it is located in the bustling <%= @restaurant.location %>.</p>
- 
- <p>The restaurant opens at <%= @restaurant.opening_times %>.</p> <br>
+	 <p>This is an authentic <%= @restaurant.cuisine_type %>, it is located in the bustling <%= @restaurant.location %>.</p>
+	 
+	 <p>The restaurant opens at <%= @restaurant.opening_times %>.</p> <br>
+	 <p>Location: <%= @restaurant.longitude %>, <%= @restaurant.latitude %></p><br>
 
-<!-- Shows particular review; returns review text and timestamp. -->
-<div>
-	<h1>Review for <%= @restaurant.restaurant_name %></h1>
+	<!-- Shows particular review; returns review text and timestamp. -->
+	<div>
+		<h1>Review for <%= @restaurant.restaurant_name %></h1>
+		<p><%= @review.review_text %></p>
 
-	<p>This review was created at <%= @review.created_at %>.</p> 
-	<p>Last update was at <%= @review.updated_at %>.</p><br>
-	<!-- Link to edit the review -->
-	<button><a href="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>/edit">Edit this review</a></button>
+		<p>This review was created at <%= @review.created_at %>.</p> 
+		<p>Last update was at <%= @review.updated_at %>.</p><br>
+		<!-- Link to edit the review -->
+		<button><a href="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>/edit">Edit this review</a></button>
 
-		<!-- Form to delete the review -->
-	<form action="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>/delete" method="POST">
-		<input type="hidden" value="DELETE" name="_method"> <!-- Method override post to delete -->
+			<!-- Form to delete the review -->
+		<form action="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>/delete" method="POST">
+			<input type="hidden" value="DELETE" name="_method"> <!-- Method override post to delete -->
 
-		<input type="submit" name="delete" value="Delete this review">
-	</form>
-</div><br><br>
+			<input type="submit" name="delete" value="Delete this review">
+		</form>
+	</div><br><br>
+<% else %> 
+	<p> There are no reviews yet! </p> 
+<% end %>
 
