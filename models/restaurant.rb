@@ -6,4 +6,9 @@ class Restaurant < ActiveRecord::Base
 
   geocoded_by :post_code
   after_validation :geocode
+
+  configure :development do
+		set :public_folder, 'public'
+  	register Sinatra::Reloader
+	end
 end
