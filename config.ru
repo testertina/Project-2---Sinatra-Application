@@ -2,6 +2,7 @@ require 'sinatra'
 require 'pg'
 require 'rubygems'
 require 'bundler'
+require 'google_maps_service'
 
 configure :development do
 	set :public_folder, 'public'  	
