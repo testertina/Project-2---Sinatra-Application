@@ -15,20 +15,20 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDthvXxBmCIxdTve-XRvAJbRhdhfsJ6wVs&callback=initMap">
     </script><br>
-<div class = "nav2">
-	 <!-- To view reviews -->
-	<button><a class="view" href="/restaurants/<%= @restaurant.id %>/reviews">View Restaurant Reviews</a></button>
 
-	<!-- Link to edit the restaurant -->
-	<button><a class ="edit" href="/restaurants/<%= @restaurant.id %>/edit">Edit Restaurant</a></button>
+<!-- To view reviews -->
+<button><a class="view" href="/restaurants/<%= @restaurant.id %>/reviews">View Restaurant Reviews</a></button>
 
-	<!-- Form to delete the restaurant -->
-	<form action="/restaurants/<%= @restaurant.id %>/delete" method="POST">
-		<input type="hidden" value="DELETE" name="_method"> <!-- Method override post to delete -->
+<!-- Link to edit the restaurant -->
+<button><a class ="edit" href="/restaurants/<%= @restaurant.id %>/edit">Edit Restaurant</a></button>
 
-		<input class="delete" type="submit" name="delete" value="Delete Restaurant">
-	</form>
-</div>
+<!-- Form to delete the restaurant -->
+<form action="/restaurants/<%= @restaurant.id %>/delete" method="POST">
+	<input type="hidden" value="DELETE" name="_method"> <!-- Method override post to delete -->
+
+	<input class="delete" type="submit" name="delete" value="Delete Restaurant">
+</form>
+
 <h3>Review this restaurant</h3>
 
 <!-- Need to create a text area to create a review. -->
