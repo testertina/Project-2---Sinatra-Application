@@ -13,7 +13,7 @@ h2 {
 }
 
 main {
-	background-color: #E4D9FF;
+	background-color: white;
 	color: #273469;
 	position: relative;
 	border-style: solid;
@@ -26,7 +26,7 @@ main {
 
 .header {
 	font-size: 100px;
-	background-color: #E4D9FF;
+	background-color: white;
 	color: #273469;
 	width:100%;
 	position: relative;
@@ -40,12 +40,12 @@ main {
 .nav {
 	width: 300px;
 	font-size: 30px;
-	background-color: #E4D9FF;
+	background-color: white;
 }
 
 button {
 	font-family: "Optima";
-	color: #E4D9FF;
+	color: white;
 	width: 200px;
 	font-size: 20px;
 	border-style: solid;
