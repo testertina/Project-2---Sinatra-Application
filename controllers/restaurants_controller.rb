@@ -16,13 +16,6 @@ get "/restaurants/:id" do
 	erb :"restaurants/show"
 end
 
-# Post review: user can add review to a specific restaurant.
-post "/restaurants/:id" do
-	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
-	@review = Review.create(restaurant_id: @restaurant.id, restaurant_name: @restaurant.restaurant_name, cuisine_type: @restaurant.cuisine_type, location: @restaurant.location, post_code: @restaurant.post_code, price: @restaurant.price, opening_times: @restaurant.opening_times, review_text: params[:review_text])
-	redirect("/restaurant/:id")
-end
-
 # Create: user can save their new restaurant data.
 post "/restaurants" do
 	# Save new restaurant elements within a restaurant variable.
