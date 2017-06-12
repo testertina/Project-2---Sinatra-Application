@@ -1,0 +1,164 @@
+body {
+	font-family: "Optima";
+	font-size: 16px;
+	color: #E4D9FF;
+	background-color: #30343F;
+	text-align: center;
+}
+
+h2 {
+	font-size: 30px;
+	position: relative;
+	margin-top: -50px;
+}
+
+main {
+	background-color: #E4D9FF;
+	color: #273469;
+	position: relative;
+	border-style: solid;
+	border-radius: 10px;
+	border-color: #273469;
+	border-width: 5px;
+	width: 80%;
+	margin-left: 150px;
+}
+
+.header {
+	font-size: 100px;
+	background-color: #E4D9FF;
+	color: #273469;
+	width:100%;
+	position: relative;
+	border-style: solid;
+	border-radius: 10px;
+	border-color: #273469;
+	border-width: 5px;
+
+}
+
+
+.nav {
+	width: 300px;
+	font-size: 30px;
+	background-color: #E4D9FF;
+}
+
+button {
+	font-family: "Optima";
+	color: #E4D9FF;
+	width: 200px;
+	font-size: 20px;
+	border-style: solid;
+	border-radius: 10px;
+	border-color: #273469;
+	border-width: 5px;
+	background-color: #30343F;
+}
+
+
+h3 {
+	font-size: 50px;
+	color: #273469;
+	height:40px;
+	width:100%;
+
+}
+
+h4 {
+	font-size: 30px;
+	color: #273469;
+	height:40px;
+	width:100%;
+
+}
+
+p {
+	font-size: 20px;
+	color: #30343F;
+	height:40px;
+	width:100%;
+
+}
+
+label {
+	font-size: 20px;
+	color: #30343F;
+	height:40px;
+	width:100%;
+
+
+}
+
+input {
+	font-family: "Optima";
+	color: #E4D9FF;
+	font-size: 20px;
+	border-style: solid;
+	border-radius: 10px;
+	border-color: #273469;
+	border-width: 5px;
+	background-color: #30343F;
+	width: 200px;
+
+}
+
+.submit {
+	font-family: "Optima";
+	color: #E4D9FF;
+	font-size: 20px;
+	border-style: solid;
+	border-radius: 10px;
+	border-color: #273469;
+	border-width: 5px;
+	background-color: #30343F;
+	width: 200px;
+	position: relative;
+	margin-right: auto;
+}
+
+textarea {
+	width: 80%;
+	height: 400px;
+}
+
+form {
+  width: 80%;
+	margin: auto;
+}
+
+label, input {
+  display: inline-block;
+}
+
+label {
+  width: 30%;
+  text-align: right;
+}
+
+label + input {
+  width: 30%;
+  margin: 0 30% 0 4%;
+}
+
+input + input {
+  float: right;
+}
+
+.delete {
+	position: inline-block;
+	margin-right: 355px;
+	
+}
+
+.edit {
+	position: relative;
+	
+}
+
+.review {
+	margin-right: 900px;
+}
+
+
+​

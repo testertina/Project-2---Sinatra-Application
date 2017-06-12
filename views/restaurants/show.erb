@@ -1,6 +1,6 @@
 <!-- Displaying the restaurant parameters -->
 
-<h1><%= @restaurant.restaurant_name %></h1>
+<h3><%= @restaurant.restaurant_name %></h3>
 
  <p>Cuisine Type: <%= @restaurant.cuisine_type %></p>
  <p>Location: <%= @restaurant.location %> <%= @restaurant.post_code %></p>
@@ -9,23 +9,23 @@
  <p>Location: <%= @restaurant.longitude %>, <%= @restaurant.latitude %></p>
 
  <!-- To view reviews -->
-<button><a href="/restaurants/<%= @restaurant.id %>/reviews">View restaurant reviews</a></button><br><br><br>
+<button><a href="/restaurants/<%= @restaurant.id %>/reviews">View Restaurant Reviews</a></button><br>
 
 <!-- Link to edit the restaurant -->
-<button><a href="/restaurants/<%= @restaurant.id %>/edit">Edit Restaurant</a></button><br>
+<button><a href="/restaurants/<%= @restaurant.id %>/edit">Edit Restaurant</a></button>
 
 <!-- Form to delete the restaurant -->
 <form action="/restaurants/<%= @restaurant.id %>/delete" method="POST">
 	<input type="hidden" value="DELETE" name="_method"> <!-- Method override post to delete -->
 
-	<input type="submit" name="delete" value="Delete restaurant">
-</form><br>
+	<input class="delete" type="submit" name="delete" value="Delete Restaurant">
+</form>
 
-<h1>Review this restaurant</h1>
+<h3>Review this restaurant</h3>
 
 <!-- Need to create a text area to create a review. -->
 <form method="POST" action="/restaurants/<%= @restaurant.id %>/reviews">
-	<label for="review_text">Enter review here:</label><br><br>
+	<label class= "review" for="review_text">Enter Review Here:</label><br>
 	<textarea name="review_text"></textarea><br><br>
-	<input type="submit" name="Submit Review">
+	<input class ="submit" type="submit" name="Submit Review">
 </form><br><br><br>

@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Local RESTaurant reviews</title>
+	<title>RESTaurant reviews</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 	<body>
-		<%= yield %>
-		 	
-	  <button><a href="/restaurants">View Restaurants</a></button><br>
-	  <button><a href="/restaurants/new">Add Restaurant</a></button>
+		<h1 class="header">RESTaurant Reviews</h1>
+		<h2>Where food matters...</h2><br>
+		<div class="navbar">
+			<button class="nav"><a href="/">Home</a></button>
+			<button class="nav"><a href="/restaurants">View Restaurants</a></button>
+		  <button class="nav"><a href="/restaurants/new">Add Restaurant</a></button>
+	  </div>
+	  <br><br>
+
+		<main>
+			<%= yield %>
+		</main> 	
+	 
  
 	</body>
 </html>

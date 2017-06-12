@@ -1,10 +1,10 @@
 <!-- Displaying all restaurants -->
-<h1>Local Restaurants</h1>
+<h3>Local Restaurants</h3>
 
 <!-- Iterates through the list of restaurants, returns name, location, opening times. Also contains a link to specific restaurant. -->
 <% @restaurants.each do |restaurant| %>
 <div>
-  <h3><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.restaurant_name %></a></h3>
+  <h4><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.restaurant_name %></a></h4>
   <p>Located in <%= restaurant.location %>, opens at <%= restaurant.opening_times %>. <%= restaurant.latitude %> <%= restaurant.longitude %></p>
   
 </div>
