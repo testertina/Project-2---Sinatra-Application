@@ -1,4 +1,4 @@
-require "/models/restaurant.rb"
+require "../models/restaurant.rb"
 
 Restaurant.create(restaurant_name: "Omar's", cuisine_type: "Lebanese", location: "Southend", post_code: "SS1 3AU", price: "££", opening_times: "9am-10pm")
 Restaurant.create(restaurant_name: "Tina's", cuisine_type: "Indian", location: "Camden", post_code: "NW3 2EG", price: "£", opening_times: "9am-12am")
