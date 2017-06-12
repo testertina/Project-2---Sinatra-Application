@@ -184,3 +184,22 @@ Attempted to use Bootstrap, however customisation of Bootstrap elements can be f
 
 Instead a CSS file was created within a public folder in the sinatra-app.  Elements within the erb files for Restaurants and Reviews have class names which are used to define styling.  The app is not responsive on mobiles/tablets, also when console is opened items shift.
 
+## Extra Gems: Geocoder and Google Maps API
+
+### Geocoder
+
+```gem geocoder ``` within the gemfile.
+
+GEOCODER: Input post code, use geocoder gem file to convert post code into longitude and latitude, display this on the cursor in google maps.
+
+Had to create a new migration in order to add postcode to the restaurants and reviews tables.  This is required for geocoder to find the coordinates by postcode.
+
+Technique was found using: 
+
+* https://github.com/alexreisner/geocoder
+* http://www.rubygeocoder.com/
+
+Geocoder is then enabled in the restaurants and reviews models.
+
+### Google Maps API
+
