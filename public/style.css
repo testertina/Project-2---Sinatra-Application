@@ -146,8 +146,8 @@ input + input {
 }
 
 .delete {
-	position: inline-block;
-	margin-right: 355px;
+	position: relative;
+	margin-right: 126px;
 	color: white;
 	width:400px;
 	
