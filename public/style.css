@@ -153,13 +153,13 @@ input + input {
 }
 
 .edit {
-	position: relative;
+	position: inline-block;
 	color: white;
 	
 }
 
 .view {
-	position: relative;
+	position: inline-block;
 	color: white;
 }
 
