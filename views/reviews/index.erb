@@ -1,5 +1,5 @@
 <!-- Displaying the restaurant parameters -->
-<% if @review then %>
+<% if @restaurant_reviews then %>
 	<h3><%= @restaurant.restaurant_name %></h3><h4>Price range: <%= @restaurant.price %></h4>
 
 	<p>This is an authentic <%= @restaurant.cuisine_type %>, it is located in the bustling <%= @restaurant.location %>.</p>
@@ -9,19 +9,19 @@
 
 	<h3>Restaurant Reviews</h3>
 	 <!-- Iterates through the list of reviews, returns review text and timestamp. -->
-	<% @reviews.each do |review| %>
+	<% @restaurant_reviews.each do |review| %>
 	<div>
-		<h4><a href="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>">Review number: <%= review.id %></a></h4>
-		<p><%= @review.review_text %></p>
-		<p>This review was created at <%= @review.created_at %>.</p> 
-		<p>Last update was at <%= @review.updated_at %>.</p><br>
+		<h4><a href="/restaurants/<%= @restaurant.id %>/reviews/<%= review.id %>">Review number: <%= review.id %></a></h4>
+		<p><%= review.review_text %></p>
+		<p>This review was created at <%= review.created_at %>.</p> 
+		<p>Last update was at <%= review.updated_at %>.</p><br>
 
 
 		<!-- Link to edit the review -->
-		<button class="edit"><a href="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>/edit">Edit this review</a></button><br>
+		<button class="edit"><a href="/restaurants/<%= @restaurant.id %>/reviews/<%= review.id %>/edit">Edit this review</a></button><br>
 
 		<!-- Form to delete the review -->
-		<form action="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>/delete" method="POST">
+		<form action="/restaurants/<%= @restaurant.id %>/reviews/<%= review.id %>/delete" method="POST">
 			<input type="hidden" value="DELETE" name="_method"> <!-- Method override post to delete -->
 
 			<input class ="delete" type="submit" name="delete" value="Delete this review">

@@ -10,7 +10,9 @@ end
 get "/restaurants/:id/reviews" do
 	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
 	@reviews = Review.all # Lists all reviews on this resturant
-	@review = Review.find_by(restaurant_id: @restaurant.id) # Finds a review with same id as restaurant.
+	@restaurant_reviews = @restaurant.reviews # Finds a review with same id as restaurant.
+	# @restaurant_reviews = [@restaurant_reviews] if !@restaurant_reviews.is_a? Array 
+
 	erb :"reviews/index"
 end
 

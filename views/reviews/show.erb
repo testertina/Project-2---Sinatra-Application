@@ -1,7 +1,7 @@
 <!-- Displaying the restaurant parameters -->
 <% if @review then %>
 
-	<h1><%= @restaurant.restaurant_name %></h1> <h3>Price range: <%= @restaurant.price %></h3>
+	<h3><%= @restaurant.restaurant_name %></h3> <h4>Price range: <%= @restaurant.price %></h4>
 
 	 <p>This is an authentic <%= @restaurant.cuisine_type %>, it is located in the bustling <%= @restaurant.location %>.</p>
 	 
@@ -10,7 +10,7 @@
 
 	<!-- Shows particular review; returns review text and timestamp. -->
 	<div>
-		<h1>Review for <%= @restaurant.restaurant_name %></h1>
+		<h3>Review for <%= @restaurant.restaurant_name %></h3>
 		<p><%= @review.review_text %></p>
 
 		<p>This review was created at <%= @review.created_at %>.</p> 
