@@ -1,7 +1,7 @@
 body {
 	font-family: "Optima";
 	font-size: 16px;
-	color: #E4D9FF;
+	color: white;
 	background-color: #30343F;
 	text-align: center;
 }
@@ -94,7 +94,7 @@ label {
 
 input {
 	font-family: "Optima";
-	color: #E4D9FF;
+	color: white;
 	font-size: 20px;
 	border-style: solid;
 	border-radius: 10px;
@@ -107,7 +107,7 @@ input {
 
 .submit {
 	font-family: "Optima";
-	color: #E4D9FF;
+	color: white;
 	font-size: 20px;
 	border-style: solid;
 	border-radius: 10px;
