@@ -11,8 +11,7 @@ GoogleMapsService.configure do |config|
   config.queries_per_second = 10
 end
 
-# Initialize client using global parameters
-gmaps = GoogleMapsService::Client.new
+
 
 configure :development do
 	set :public_folder, 'public'  	

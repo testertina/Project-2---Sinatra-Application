@@ -6,7 +6,15 @@
  <p>Location: <%= @restaurant.location %> <%= @restaurant.post_code %></p>
  <p>Price: <%= @restaurant.price %></p>
  <p>Opening times: <%= @restaurant.opening_times %></p>
- <p>Location: <%= @restaurant.longitude %>, <%= @restaurant.latitude %></p>
+ <p id="long"><%= @restaurant.longitude %></p>
+ <p id="lat"><%= @restaurant.latitude %></p>
+
+  <h4>Location</h4>
+    <div id="map"></div>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDthvXxBmCIxdTve-XRvAJbRhdhfsJ6wVs&callback=initMap">
+    </script><br>
 
  <!-- To view reviews -->
 <button><a href="/restaurants/<%= @restaurant.id %>/reviews">View Restaurant Reviews</a></button><br>

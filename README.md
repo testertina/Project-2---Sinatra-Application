@@ -203,3 +203,12 @@ Geocoder is then enabled in the restaurants and reviews models.
 
 ### Google Maps API
 
+Created an API key using gmail account.  Enabled specific API's following instructions from:
+
+https://github.com/edwardsamuel/google-maps-services-ruby
+
+Found on google a step by step on how to implement google maps within html.
+
+Created a public JS file in which JS could be contained.
+
+
