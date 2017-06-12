@@ -5,7 +5,7 @@
 <form action="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>/update" method="POST">
 	<input type="hidden" name="_method" value="PATCH"> <!-- Method override for post to patch -->
 
-	<label for="review_text">Edit Review:</label><br><br>
+	<label class="review_edit" for="review_text">Edit Review:</label><br><br>
 	<textarea class="form-control" rows="3" name="review_text"></textarea><br><br>
 	<input type="submit" name="Submit Edit">
 </form><br><br>
