@@ -47,5 +47,5 @@ delete "/restaurants/:id/reviews/:id2/delete" do
 	@review = Review.find(params[:id2]) # Finds a review with same id as restaurant.
 	@review.destroy
 
-	redirect("/restaurants/#{@restaurant.id}")
+	redirect("/restaurants/#{@restaurant.id}/reviews")
 end

@@ -178,3 +178,9 @@ Each RESTful route (exceptions: DELETE and UPDATE) have corresponding erb files 
 
 No NEW RESTful route as a review is created in the restaurants/show.erb and saved to the review table using a foreign key.
 
+## Styling
+
+Attempted to use Bootstrap, however customisation of Bootstrap elements can be fiddly.
+
+Instead a CSS file was created within a public folder in the sinatra-app.  Elements within the erb files for Restaurants and Reviews have class names which are used to define styling.  The app is not responsive on mobiles/tablets, also when console is opened items shift.
+
