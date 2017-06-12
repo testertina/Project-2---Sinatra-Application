@@ -4,6 +4,16 @@ require 'rubygems'
 require 'bundler'
 require 'google_maps_service'
 
+# Setup global parameters
+GoogleMapsService.configure do |config|
+  config.key = 'AIzaSyDbisQE-C7pGakNwFKRdZI2Re9Q0NkLIBY'
+  config.retry_timeout = 20
+  config.queries_per_second = 10
+end
+
+# Initialize client using global parameters
+gmaps = GoogleMapsService::Client.new
+
 configure :development do
 	set :public_folder, 'public'  	
 end
