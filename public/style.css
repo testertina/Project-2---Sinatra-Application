@@ -156,8 +156,14 @@ input + input {
 
 .edit {
 	position: relative;
+	margin-right: 355px;
 	color: white;
 	
+}
+
+.view {
+	position: relative;
+	color: white;
 }
 
 .review {
