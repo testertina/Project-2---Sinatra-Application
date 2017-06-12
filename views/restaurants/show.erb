@@ -20,7 +20,7 @@
 <button><a class="view" href="/restaurants/<%= @restaurant.id %>/reviews">View Restaurant Reviews</a></button><br>
 
 <!-- Link to edit the restaurant -->
-<button class ="edit"><a href="/restaurants/<%= @restaurant.id %>/edit">Edit Restaurant</a></button>
+<button><a class ="edit" href="/restaurants/<%= @restaurant.id %>/edit">Edit Restaurant</a></button>
 
 <!-- Form to delete the restaurant -->
 <form action="/restaurants/<%= @restaurant.id %>/delete" method="POST">
