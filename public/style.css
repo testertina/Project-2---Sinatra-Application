@@ -177,4 +177,8 @@ input + input {
  	display: none;
  }
 
+a {
+  color: white;
+  text-decoration: none; 
+}
 ​
