@@ -3,6 +3,7 @@ require 'pg'
 require 'rubygems'
 require 'bundler'
 require 'google_maps_service'
+require 'activerecord'
 
 # Setup global parameters
 GoogleMapsService.configure do |config|
@@ -11,6 +12,7 @@ GoogleMapsService.configure do |config|
   config.queries_per_second = 10
 end
 
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/restaurant_reviews')
 
 
 configure :development do
