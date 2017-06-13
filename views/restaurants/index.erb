@@ -3,7 +3,7 @@
 
 <!-- Iterates through the list of restaurants, returns name, location, opening times. Also contains a link to specific restaurant. -->
 <% @restaurants.each do |restaurant| %>
-<div>
+<div id="restaurant">
   <h4><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.restaurant_name %></a></h4>
   <p>Located in <%= restaurant.location %>, opens at <%= restaurant.opening_times %>.</p>
   

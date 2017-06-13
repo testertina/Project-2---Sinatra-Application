@@ -192,5 +192,12 @@ a {
 	margin-right: 620px;
 }
 
+#restaurants {
+	border-style: solid;
+	border-radius: 10px;
+	border-color: #273469;
+	border-width: 5px;
+}
+
 
 ​
