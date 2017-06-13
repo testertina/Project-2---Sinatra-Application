@@ -169,7 +169,7 @@ input + input {
 }
 
 #map {
-  width: 700px;
+  width: 600px;
   height: 400px;
   background-color: grey;
   margin: auto;
@@ -199,6 +199,16 @@ a {
 	border-width: 2px;
 	width: 60%;
 	height: 30%;
+	display: inline-block;
+}
+
+#restaurant_display {
+	border-style: solid;
+	border-radius: 10px;
+	border-color: #273469;
+	border-width: 2px;
+	width: 60%;
+	height: 40%;
 	display: inline-block;
 }
 
