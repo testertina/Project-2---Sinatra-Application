@@ -118,7 +118,7 @@ input {
 }
 
 textarea {
-	width: 60%;
+	width: 80%;
 	height: 200px;
 }
 
@@ -132,7 +132,7 @@ label, input {
 }
 
 label {
-  width: 40%;
+  width: 30%;
   text-align: right;
 }
 
@@ -147,7 +147,7 @@ input + input {
 
 .delete {
 	position: relative;
-	margin-right: 253px;
+	margin-right: 73px;
 	color: white;
 	width: 400px;
 	
@@ -165,7 +165,7 @@ input + input {
 }
 
 .review {
-	margin-right: 220px;
+	margin-right: 450px;
 }
 
 #map {
