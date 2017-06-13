@@ -196,7 +196,9 @@ a {
 	border-style: solid;
 	border-radius: 10px;
 	border-color: #273469;
-	border-width: 5px;
+	border-width: 2px;
+	width: 60%;
+	height: 40%;
 }
 
 
