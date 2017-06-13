@@ -227,8 +227,18 @@ https://devcenter.heroku.com/articles/getting-started-with-ruby#introduction
 * Download Heroku CLI and log into Heroku account
 *  Clone the source code using
 ``` git clone https://git.heroku.com/warm-oasis-12289.git ```
+
 * Deploy application using
 ``` heroku open ```
+
+### Download sinatra-app using GitHub
+
+To download the application from github use the following command in terminal:
+
+``` git clone https://github.com/tgohil04/Project-2---Sinatra-Application.git ```
+
+In terminal use rackup to locally host the application.
+
 
 
 
