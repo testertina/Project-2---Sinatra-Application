@@ -211,4 +211,25 @@ Found on google a step by step on how to implement google maps within html.
 
 Created a public JS file in which JS could be contained.
 
+## Deploying website up to Heroku
+
+https://devcenter.heroku.com/articles/getting-started-with-ruby#introduction
+
+* Downloaded Heroku CLI and logged into Heroku account
+* Used Heroku create to create a git remote repository
+* Used git add . and git commit -m "" to create a commit to the git repository
+* git push heroku master to push the files to the repository
+* heroku open to deploy website.
+
+
+### Download sinatra-app using Heroku
+
+* Download Heroku CLI and log into Heroku account
+*  Clone the source code using
+``` git clone https://git.heroku.com/warm-oasis-12289.git ```
+* Deploy application using
+``` heroku open ```
+
+
+
 
