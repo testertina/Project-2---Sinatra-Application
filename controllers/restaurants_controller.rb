@@ -46,10 +46,6 @@ end
 # Delete: user can delete a specific restaurant.
 delete "/restaurants/:id/delete" do
 	@restaurant = Restaurant.find(params[:id]) # Finds a restaurant with specific id.
-	# @reviews = Review.all # Lists all reviews on this restaurant
-	# binding.pry
-	# @restaurant_reviews = @restaurant.reviews # Finds a review with same id as restaurant.
-	# @restaurant_reviews.destroy
 	@restaurant.destroy
 	redirect("/restaurants")
 end
