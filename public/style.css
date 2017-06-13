@@ -161,6 +161,14 @@ input + input {
 	
 }
 
+.delete3 {
+	position: relative;
+	margin-right: 200px;
+	color: white;
+	width: 400px;
+	
+}
+
 .edit {
 	position: inline-block;
 	color: white;

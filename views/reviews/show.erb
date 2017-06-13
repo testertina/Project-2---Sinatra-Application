@@ -21,7 +21,7 @@
 		<form action="/restaurants/<%= @restaurant.id %>/reviews/<%= @review.id %>/delete" method="POST">
 			<input type="hidden" value="DELETE" name="_method"> <!-- Method override post to delete -->
 
-			<input type="submit" name="delete" value="Delete this review">
+			<input class="delete3" type="submit" name="delete" value="Delete this review">
 		</form><br><br><br>
 	</div>
 <% else %> 
