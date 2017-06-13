@@ -223,4 +223,13 @@ a {
   margin: 20px 200px 20px;
 }
 
+#review {
+	border-style: solid;
+	border-radius: 10px;
+	border-color: #273469;
+	border-width: 2px;
+	height: 40%;
+	display: inherit;
+}
+
 ​

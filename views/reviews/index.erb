@@ -1,16 +1,17 @@
 <!-- Displaying the restaurant parameters -->
 <% if @restaurant_reviews then %>
-	<h3><%= @restaurant.restaurant_name %></h3><h4>Price range: <%= @restaurant.price %></h4>
+	<div id="restaurant">
+		<h3><%= @restaurant.restaurant_name %></h3><h4>Price range: <%= @restaurant.price %></h4>
 
-	<p>This is an authentic <%= @restaurant.cuisine_type %>, it is located in the bustling <%= @restaurant.location %>.</p>
-	 
-	<p>The restaurant opens at <%= @restaurant.opening_times %>.</p> <br>
+		<p>This is an authentic <%= @restaurant.cuisine_type %>, it is located in the bustling <%= @restaurant.location %>.</p>
+		 
+		<p>The restaurant opens at <%= @restaurant.opening_times %>.</p> <br>
 
-
+	</div>
 	<h3>Restaurant Reviews</h3>
 	 <!-- Iterates through the list of reviews, returns review text and timestamp. -->
 	<% @restaurant_reviews.each do |review| %>
-	<div>
+	<div id="review">
 		<h4><a href="/restaurants/<%= @restaurant.id %>/reviews/<%= review.id %>">Review number: <%= review.id %></a></h4>
 		<p><%= review.review_text %></p>
 		<p id="tag">This review was created at <%= review.created_at %>. Last updated at <%= review.updated_at %>.</p><br><br>
