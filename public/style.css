@@ -153,6 +153,14 @@ input + input {
 	
 }
 
+.delete2 {
+	position: relative;
+	margin-right: 95px;
+	color: white;
+	width: 400px;
+	
+}
+
 .edit {
 	position: inline-block;
 	color: white;
@@ -228,7 +236,7 @@ a {
 	border-radius: 10px;
 	border-color: #273469;
 	border-width: 2px;
-	height: 40%;
+	height: 50%;
 	width: 60%;
  	display: inline-block;
  	margin: 0 0px 20px 0px;
