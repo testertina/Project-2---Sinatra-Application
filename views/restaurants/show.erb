@@ -1,21 +1,23 @@
 <!-- Displaying the restaurant parameters -->
+<div id="restaurant">
+	<h3><%= @restaurant.restaurant_name %></h3>
 
-<h3><%= @restaurant.restaurant_name %></h3>
+	 <p>Cuisine Type: <%= @restaurant.cuisine_type %></p>
+	 <p>Location: <%= @restaurant.location %> <%= @restaurant.post_code %></p>
+	 <p>Price: <%= @restaurant.price %></p>
+	 <p>Opening times: <%= @restaurant.opening_times %></p>
+	 <p id="long"><%= @restaurant.longitude %></p>
+	 <p id="lat"><%= @restaurant.latitude %></p>
 
- <p>Cuisine Type: <%= @restaurant.cuisine_type %></p>
- <p>Location: <%= @restaurant.location %> <%= @restaurant.post_code %></p>
- <p>Price: <%= @restaurant.price %></p>
- <p>Opening times: <%= @restaurant.opening_times %></p>
- <p id="long"><%= @restaurant.longitude %></p>
- <p id="lat"><%= @restaurant.latitude %></p>
 
-  <h4>Location</h4>
-    <div id="map"></div>
+<h4>Location</h4>
+  <div id="map"></div>
 
-    <script async defer
+  <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDthvXxBmCIxdTve-XRvAJbRhdhfsJ6wVs&callback=initMap">
-    </script><br>
+  </script><br><br><br>
 
+</div>
 <!-- To view reviews -->
 <button><a class="view" href="/restaurants/<%= @restaurant.id %>/reviews">View Restaurant Reviews</a></button><br><br>
 
@@ -27,7 +29,7 @@
 	<input type="hidden" value="DELETE" name="_method"> <!-- Method override post to delete -->
 
 	<input class="delete" type="submit" name="delete" value="Delete Restaurant">
-</form><br><br>
+</form><br><br><br>
 
 <h3>Review this restaurant</h3>
 
