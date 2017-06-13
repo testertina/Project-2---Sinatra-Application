@@ -132,7 +132,7 @@ label, input {
 }
 
 label {
-  width: 30%;
+  width: 40%;
   text-align: right;
 }
 
@@ -165,7 +165,7 @@ input + input {
 }
 
 .review {
-	margin-right: 500px;
+	margin-right: 220px;
 }
 
 #map {

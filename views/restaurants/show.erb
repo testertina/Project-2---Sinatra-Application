@@ -17,19 +17,21 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDthvXxBmCIxdTve-XRvAJbRhdhfsJ6wVs&callback=initMap">
   </script><br><br><br>
 
+
+	<!-- To view reviews -->
+	<button><a class="view" href="/restaurants/<%= @restaurant.id %>/reviews">View Restaurant Reviews</a></button><br><br>
+
+	<!-- Link to edit the restaurant -->
+	<button><a class ="edit" href="/restaurants/<%= @restaurant.id %>/edit">Edit Restaurant</a></button><br><br>
+
+	<!-- Form to delete the restaurant -->
+	<form action="/restaurants/<%= @restaurant.id %>/delete" method="POST">
+		<input type="hidden" value="DELETE" name="_method"> <!-- Method override post to delete -->
+
+		<input class="delete" type="submit" name="delete" value="Delete Restaurant">
+	</form><br><br><br>
 </div>
-<!-- To view reviews -->
-<button><a class="view" href="/restaurants/<%= @restaurant.id %>/reviews">View Restaurant Reviews</a></button><br><br>
 
-<!-- Link to edit the restaurant -->
-<button><a class ="edit" href="/restaurants/<%= @restaurant.id %>/edit">Edit Restaurant</a></button><br><br>
-
-<!-- Form to delete the restaurant -->
-<form action="/restaurants/<%= @restaurant.id %>/delete" method="POST">
-	<input type="hidden" value="DELETE" name="_method"> <!-- Method override post to delete -->
-
-	<input class="delete" type="submit" name="delete" value="Delete Restaurant">
-</form><br><br><br>
 
 <div id="add_review">
 	<h3>Review this restaurant</h3>
