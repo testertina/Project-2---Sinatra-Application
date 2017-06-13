@@ -147,7 +147,7 @@ input + input {
 
 .delete {
 	position: relative;
-	margin-right: 95px;
+	margin-right: 73px;
 	color: white;
 	width: 400px;
 	
@@ -229,7 +229,8 @@ a {
 	border-color: #273469;
 	border-width: 2px;
 	height: 40%;
-	display: inherit;
+	width: 60%;
+ 	display: inline-block;
 }
 
 ​
