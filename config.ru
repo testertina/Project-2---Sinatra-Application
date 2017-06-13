@@ -3,7 +3,7 @@ require 'pg'
 require 'rubygems'
 require 'bundler'
 require 'google_maps_service'
-require 'pry'
+
 # require 'activerecord'
 
 # Setup global parameters
