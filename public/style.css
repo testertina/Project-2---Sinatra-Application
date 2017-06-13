@@ -209,8 +209,19 @@ a {
 	border-width: 2px;
 	width: 60%;
 	height: 40%;
-	display: inline-block;
+	display: inherit;
+  margin: 20px 200px 20px;
 }
 
+#add_review {
+	border-style: solid;
+	border-radius: 10px;
+	border-color: #273469;
+	border-width: 2px;
+	width: 60%;
+	height: 40%;
+	display: inherit;
+  margin: 20px 200px 20px;
+}
 
 ​

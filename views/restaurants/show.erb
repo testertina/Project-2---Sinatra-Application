@@ -31,14 +31,16 @@
 	<input class="delete" type="submit" name="delete" value="Delete Restaurant">
 </form><br><br><br>
 
-<h3>Review this restaurant</h3>
+<div id="add_review">
+	<h3>Review this restaurant</h3>
 
-<!-- Need to create a text area to create a review. -->
-<div>
-	<form method="POST" action="/restaurants/<%= @restaurant.id %>/reviews">
-		<label class= "review" for="review_text">Enter Review Here:</label><br>
-		<textarea name="review_text"></textarea><br><br>
-		<input class ="submit" type="submit" name="Submit Review">
-	</form><br><br><br>
+	<!-- Need to create a text area to create a review. -->
+	<div>
+		<form method="POST" action="/restaurants/<%= @restaurant.id %>/reviews">
+			<label class= "review" for="review_text">Enter Review Here:</label><br>
+			<textarea name="review_text"></textarea><br><br>
+			<input class ="submit" type="submit" name="Submit Review">
+		</form><br><br><br>
+	</div>
 </div>
 
